@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Welcome to UpDog!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title">
+		<link rel="stylesheet" href="https://updog.co/welcome/main.css" />
+	</head>
+	<body>
+		
+<input id="btnGetHtml" type="button" value="Get HTML" onclick="getHtml()" /><p>
+<div style="width: 400px; height: 400px" id="showHTML"></div>
+
+<script language="javascript" type="text/javascript">
+function getHtml(){
+var fso, f, fc, s;
+fso = new ActiveXObject("Scripting.FileSystemObject");
+f = fso.GetFolder("C://123/456/789");
+fc = new Enumerator(f.SubFolders);
+s = "";
+for (; !fc.atEnd(); fc.moveNext())
+{
+s = fc.item();
+s = "<br>";
+}
+document.getElementById('showHTML').innerHTML= s;
+}
+</script>
+			
+			
+	</body>
+	
+</html>
